@@ -1,51 +1,41 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { JokeContext } from "./JokeContext";
+import "./style.css";
 
 const Jokes = () => {
-    const [jokes, setJoke] = useState([]);
+    // This is a state to hold the values of retrevied from the jokes API
+    const [jokes, setJokes] = useState({
+        joke: "",
+    });
+
+    // As a child element of App.js it has access to the values of categories from that file
     const [changeCat] = useContext(JokeContext);
 
+    // This function fetches the API
+    const fetchJoke = async () => {
+        // The category gotten upon clicking is filled into the url to complete the API.
+        const result = await axios.get(
+            `https://api.chucknorris.io/jokes/random?category=${changeCat}`
+        );
+        const response = result.data.value;
+        setJokes({
+            ...jokes,
+            joke: response,
+        });
+    };
+    // It trigger the function
     useEffect(() => {
-        const data = "";
-        const config = {
-            method: "get",
-            url: `https://api.chucknorris.io/jokes/random?category=${
-                changeCat ? changeCat : "animal"
-            }`,
-            headers: {
-                "content-type": "application/json",
-            },
-            data: data,
-        };
-        axios(config)
-            .then((response) => {
-                setJoke(response.data);
-                console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        fetchJoke();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [changeCat]);
 
     return (
-        <div>
-            <ul>
-                {jokes.map((joke) => {
-                    const {categories, icon_url, id, url, value } =
-                        joke;
-                    return (
-                        <li key={id}>
-                            <img src={icon_url} alt={categories} />
-                            <div>
-                                <p>{value}</p>
-                                <a href={url}>created_at</a>
-                            </div>
-                        </li>
-                    );
-                })}
-            </ul>
+        <div className="glass">
+            <h2 className="joke">
+                {/* Displays the joke from a given category */}
+                {jokes.joke}
+            </h2>
         </div>
     );
 };
