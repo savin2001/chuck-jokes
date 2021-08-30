@@ -32,6 +32,7 @@ p {
     color: rgb(241, 240, 240);
     width: 80%;
     line-height: 35px;
+    margin-bottom: 2rem;
 }
 small {
     font-size: 10px;
@@ -49,6 +50,27 @@ small {
 }
 .landing-text {
     width: 80%;
+}
+.btn {
+  background: #65dfc9;
+  background-image: -webkit-linear-gradient(top, #65dfc9, #6cdbeb);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #65dfc9;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  transition: .4s ease-in;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  text-decoration: none;
+  transition: .4s ease-in;
 }
 .main {
     font-family: "Poppins", sans-serif;
@@ -155,6 +177,7 @@ small {
       -webkit-transform: translateY(0%);
   }
 }
+
 
 .category {
     padding: 0.5rem 1.3rem;

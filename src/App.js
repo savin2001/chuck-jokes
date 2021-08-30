@@ -48,10 +48,11 @@ function App() {
                             toughness, attitude, virility, sophistication, and
                             masculinity.
                         </p>
+                        <a href="#chuck" className="btn">Wanna laugh?</a>
                     </div>
                 </div>
                 <div className="main expandUp">
-                    <h2>Click on category to get 'em jokes</h2>
+                    <h2 id="chuck">Click on category to get 'em jokes</h2>
                     <div className=" split">
                         <div className="first-half">
                             {categories.map((item) => {
