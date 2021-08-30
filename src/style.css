@@ -1,40 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 h1 {
-    padding: 2rem;
+    padding: 1rem 0 0.5rem;
+    text-align: left;
+    font-size: 30px;
+    color: #65dfc9;
+    margin-bottom: 1rem;
 }
 h2 {
     padding: 2rem 0;
     font-weight: 200;
+    text-align: center;
 }
 h4 {
     font-size: 18px;
     padding: 7px 0;
+    text-align: center;
 }
-p {
+h5 {
     font-size: 14px;
     padding: 3px 0;
 }
-small p {
+p {
+    font-size: 20px;
+    text-align: left;
+    color: rgb(241, 240, 240);
+    width: 80%;
+    line-height: 35px;
+}
+small {
     font-size: 10px;
-    color: rgb(129, 125, 125);
+    color: rgb(241, 240, 240);
 }
-button {
-    width: 60%;
-    align-self: center;
-    border: transparent;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 600;
-    color: rgba(255, 0, 0, 0.788);
-    transition: 0.3s ease-out;
+.landing {
+    height: 100vh;
+    background: linear-gradient(to right top, #5c5c5c, #1c3a3f);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-button:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in;
+.landing-text {
+    width: 80%;
 }
 .main {
     font-family: "Poppins", sans-serif;
@@ -43,7 +57,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 4rem;
 }
 .split {
     display: flex;
@@ -67,7 +81,7 @@ button:hover {
     padding: 1rem;
 }
 .glass {
-    background: white;
+    background: rgb(255, 255, 255);
     width: 90%;
     background: linear-gradient(
         to right bottom,
@@ -110,6 +124,36 @@ button:hover {
     100% {
         -webkit-transform: translateX(0%);
     }
+}
+.expandUp {
+  animation-name: expandUp;
+  -webkit-animation-name: expandUp;
+
+  animation-duration: 2.2s;
+  -webkit-animation-duration: 2.7s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes expandUp {
+  0% {
+      transform: translateY(100%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+      transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes expandUp {
+  0% {
+      -webkit-transform: translateY(100%);
+  }
+  100% {
+      -webkit-transform: translateY(0%);
+  }
 }
 
 .category {
@@ -156,6 +200,16 @@ button:hover {
     bottom: 30%;
     left: 80%;
     animation: scaling 10s infinite linear;
+}
+.footer {
+    padding: 1.5rem 3rem;
+}
+.footer-bg {
+    background-color: rgb(19, 19, 19);
+}
+.footer-text {
+    text-align: center;
+    color: rgb(255, 254, 254);
 }
 
 @keyframes up-down {

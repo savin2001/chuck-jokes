@@ -32,10 +32,10 @@ const Jokes = () => {
 
     return (
         <div className="glass">
-            <h2 className="joke">
+            <h4 className="joke">
                 {/* Displays the joke from a given category */}
                 {jokes.joke}
-            </h2>
+            </h4>
         </div>
     );
 };

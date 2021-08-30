@@ -3,6 +3,7 @@ import Jokes from "./Jokes";
 import { JokeContext } from "./JokeContext";
 import axios from "axios";
 import "./style.css";
+
 function App() {
     // Creates a state for the category value being clicked to change to
     const [changeCat, setChangeCat] = useState("");
@@ -34,22 +35,41 @@ function App() {
     return (
         <JokeContext.Provider value={[changeCat, setChangeCat]}>
             <div className="App">
-                <div className="main">
-                    <h1>Chuck Norris Jokes</h1>
+                <div className="landing slideLeft">
+                    <div className="landing-text">
+                        <h1>Chuck Norris Jokes</h1>
+
+                        <p>
+                            Chuck Norris facts are satirical factoids about
+                            martial artist and actor Chuck Norris that have
+                            become an Internet phenomenon and as a result have
+                            become widespread in popular culture. The 'facts'
+                            are normally absurd hyperbolic claims about Norris'
+                            toughness, attitude, virility, sophistication, and
+                            masculinity.
+                        </p>
+                    </div>
+                </div>
+                <div className="main expandUp">
+                    <h2>Click on category to get 'em jokes</h2>
                     <div className=" split">
                         <div className="first-half">
                             {categories.map((item) => {
                                 return (
-                                    <div onClick={()=> {
-                                        document.getElementById("joke").classList.add("slideLeft")
-                                    }}>
+                                    <div
+                                        onClick={() => {
+                                            document
+                                                .getElementById("joke")
+                                                .classList.add("slideLeft");
+                                        }}
+                                    >
                                         <div
                                             key={item}
                                             onClick={() => setChangeCat(item)}
                                             className="category"
                                         >
                                             <div className="details">
-                                                <h4>{item}</h4>
+                                                <h5>{item}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -65,9 +85,11 @@ function App() {
                         <div className="circle3"></div>
                     </div>
                 </div>
-                <div className="footer">
-                    <div className="footer-bg">
-                        <div className="footer-text">Osuka Technologies</div>
+                <div className="footer-bg">
+                    <div className="footer">
+                        <div className="footer-text">
+                            <small>Osuka Technologies</small>
+                        </div>
                     </div>
                 </div>
             </div>
