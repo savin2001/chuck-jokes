@@ -43,11 +43,7 @@ function App() {
                             Chuck Norris facts are satirical factoids about
                             martial artist and actor Chuck Norris that have
                             become an Internet phenomenon and as a result have
-                            become widespread in popular culture. The 'facts'
-                            are normally absurd hyperbolic claims about Norris'
-                            toughness, attitude, virility, sophistication, and
-                            masculinity.
-                        </p>
+                            become widespread in popular culture.                        </p>
                         <a href="#chuck" className="btn">Wanna laugh?</a>
                     </div>
                 </div>
