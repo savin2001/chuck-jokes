@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/chuck-jokes/static/css/main.0b29aea0.chunk.css",
+    "main.js": "/chuck-jokes/static/js/main.e57b7830.chunk.js",
+    "main.js.map": "/chuck-jokes/static/js/main.e57b7830.chunk.js.map",
+    "runtime-main.js": "/chuck-jokes/static/js/runtime-main.a82cc776.js",
+    "runtime-main.js.map": "/chuck-jokes/static/js/runtime-main.a82cc776.js.map",
+    "static/js/2.736c1bf2.chunk.js": "/chuck-jokes/static/js/2.736c1bf2.chunk.js",
+    "static/js/2.736c1bf2.chunk.js.map": "/chuck-jokes/static/js/2.736c1bf2.chunk.js.map",
+    "index.html": "/chuck-jokes/index.html",
+    "static/css/main.0b29aea0.chunk.css.map": "/chuck-jokes/static/css/main.0b29aea0.chunk.css.map",
+    "static/js/2.736c1bf2.chunk.js.LICENSE.txt": "/chuck-jokes/static/js/2.736c1bf2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a82cc776.js",
+    "static/js/2.736c1bf2.chunk.js",
+    "static/css/main.0b29aea0.chunk.css",
+    "static/js/main.e57b7830.chunk.js"
+  ]
+}
